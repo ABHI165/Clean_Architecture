@@ -64,7 +64,7 @@ fun PostItem(
     val cardPaddingHorizontal by transition.animateDp({
         tween(durationMillis = EXPAND_ANIMATION_DURATION)
     }, label = "Tran_padding") {
-        if ( isExpanded) 48.dp else 24.dp
+        if ( isExpanded) 26.dp else 24.dp
     }
     val cardElevation by transition.animateDp({
         tween(durationMillis = EXPAND_ANIMATION_DURATION)
@@ -200,7 +200,8 @@ body:String = ""
             Spacer(modifier = Modifier.heightIn(10.dp))
             Text(
                 text = body,
-                textAlign = TextAlign.Center
+                textAlign = TextAlign.Start,
+                style = MaterialTheme.typography.body1
             )
         }
 
